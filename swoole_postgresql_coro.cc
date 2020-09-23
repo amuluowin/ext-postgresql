@@ -1375,9 +1375,7 @@ static PHP_METHOD(swoole_postgresql_coro, fetchObject) {
 }
 
 static PHP_METHOD(swoole_postgresql_coro, getVersion) {
-    int value;
-    value = PQlibVersion();
-    RETVAL_LONG((long)value);
+    RETVAL_LONG((long)PQlibVersion());
 }
 
 static void _free_result(zend_resource *rsrc) {
